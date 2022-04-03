@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Cover art!</title>
+    <link rel="stylesheet" href="mus.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="SettingsWindowOff">
+        <h2>Volume</h2>
+        <h1 id="rangeValue">50</h1>
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value="50"
+            class="slider"
+            onChange="rangeSlide(this.value)"
+            onmousemove="rangeSlide(this.value)"
+          />
+        </div>
+      </div>
+      <div class="InfoWindowOff">
+        <h2>Epicly made with child labor!</h2>
+      </div>
+      <div class="ProfileWindowOff">
+          <label class="InputLabel1">Login</label>
+          <input type="text" class="InputField" /><br /><br />
+          <label class="InputLabel2">Password</label>
+          <input type="password" class="InputField" /><br /><br />
+          <input type="submit" value="Submit" class="submitbutton" />
+        </form>
+      </div>
+      <div class="navigationoff">
+        <div>
+          <div class="settings" onclick="SettingsSwitchOn()"></div>
+          <h3 class="txt">Settings</h3>
+        </div>
+        <div>
+          <div class="info" onclick="InfoSwitchOn()"></div>
+          <h3 class="txt">Info</h3>
+        </div>
+        <div>
+          <div class="profile" onclick="ProfileSwitchOn()"></div>
+          <h3 class="txt">Profile</h3>
+        </div>
+      </div>
+      <div class="arrowhidden">
+        <div class="arrow_iconhiden" onclick="navopen()"></div>
+      </div>
+      <div class="MiddlePart">
+        <H1 class="BigText">Songs that we listen to</H1>
+        <h2 class="SmallText">Don't forget to check out other songs</h2>
+      </div>
+      <div class="colections">
+        <div class="record"><img src="pho.jpg" class="cov" /></div>
+        <div class="record"><img src="pho2.jpg" class="cov" /></div>
+        <div class="record"><img src="pho3.jpg" class="cov" /></div>
+        <div class="record"><img src="pho4.jpg" class="cov" /></div>
+        <div class="record"><img src="pho5.jpg" class="cov" /></div>
+        <div class="record"><img src="pho6.jpg" class="cov" /></div>
+      </div>
+    </div>
+    <script src="mus.js"></script>
+  </body>
+</html>

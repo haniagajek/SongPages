@@ -1,0 +1,353 @@
+@font-face {
+  font-family: "Squigles";
+  src: url("Soria-Bold.otf");
+}
+
+@keyframes show {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes noshow {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.record {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  width: 150px;
+  background-color: aqua;
+  margin: 4px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 30%;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 40px;
+  background-color: #1d64ba;
+  overflow: hidden;
+  width: 154px;
+  position: absolute;
+  left: 50px;
+  transition: all 0.2s linear;
+}
+
+.navigationoff {
+  display: flex;
+  flex-direction: column;
+  gap: 30%;
+  background-color: rgba(75, 61, 61, 0.1);
+  border: none;
+  border-radius: 40px;
+  overflow: hidden;
+  width: 154px;
+  position: absolute;
+  left: 50px;
+  visibility: hidden;
+  transition: all 0.2s linear;
+}
+.info {
+  margin-left: 3.3rem;
+  width: 48px;
+  height: 48px;
+  background-image: url(help.png);
+}
+.settings {
+  margin-left: 3.3rem;
+  width: 48px;
+  height: 48px;
+  background-image: url(gear.png);
+  margin-top: 3rem;
+}
+.profile {
+  margin-left: 3.3rem;
+  width: 48px;
+  height: 48px;
+  background-image: url(profile.png);
+}
+
+.info:hover {
+  cursor: pointer;
+}
+
+.settings:hover {
+  cursor: pointer;
+}
+
+.profile:hover {
+  cursor: pointer;
+}
+.txt {
+  text-align: center;
+}
+.arrowhidden {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 34px;
+  overflow: hidden;
+  position: absolute;
+  left: 10px;
+  transition: all 0.5s linear;
+}
+
+.arrowshown {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 34px;
+  overflow: hidden;
+  position: absolute;
+  left: 215px;
+  transition: all 0.5s linear;
+}
+.arrow_iconhiden {
+  background-image: url(arrow_right.png);
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+  transition: all 0.5s linear;
+}
+
+.arrow_iconshown {
+  background-image: url(arrow_left.png);
+  background-repeat: no-repeat;
+  height: 32px;
+  width: 32px;
+  transition: all 0.5s linear;
+}
+
+.arrow_iconhiden:hover {
+  cursor: pointer;
+}
+.arrow_iconshown:hover {
+  cursor: pointer;
+}
+.MiddlePart {
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(135deg, #1e5799 0%, #1d64ba 43%, #000000 100%);
+}
+h1 {
+  font-size: 72px;
+  color: #edf5e1;
+  font-family: "Squigles";
+}
+
+h2 {
+  font-size: 26px;
+  color: #edf5e1;
+  font-family: "Squigles";
+}
+
+h3 {
+  font-size: 18px;
+  color: #edf5e1;
+  font-family: "Squigles";
+}
+
+.record {
+  margin-top: -40px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+  animation: noshow 1s ease 0s 1 normal forwards;
+}
+
+.record:hover {
+  cursor: pointer;
+  transform: scale(1.4);
+  transition: all 0.3s ease-in-out;
+  animation: show 1s ease 0s 1 normal forwards;
+}
+
+.colections {
+  position: absolute;
+  right: 50px;
+}
+
+.SettingsWindow {
+  width: 1000px;
+  height: 500px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 40px;
+  background-color: #1d64ba;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.SettingsWindowOff {
+  display: none;
+  position: absolute;
+}
+.slider {
+  width: 900px;
+  height: 15px;
+  -webkit-appearance: none;
+  background: #111;
+  outline: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  border: 4px solid #333;
+  box-shadow: -807px 0 0 800px #ffffff;
+}
+
+#rangeValue {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 6em;
+  color: #ffffff;
+  font-weight: 200;
+  font-family: "Squigles";
+}
+
+.InfoWindowOff {
+  display: none;
+  position: absolute;
+}
+
+.InfoWindow {
+  width: 1000px;
+  height: 500px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 40px;
+  background-color: #1d64ba;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ProfileWindow {
+  width: 1000px;
+  height: 500px;
+  border-style: solid;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 40px;
+  background-color: #1d64ba;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ProfileWindowOff {
+  display: none;
+  position: absolute;
+}
+
+.InputField {
+  height: 40px;
+  width: 600px;
+  border-color: #ffffff;
+  border-width: 6px;
+  border-radius: 40px;
+  background: none;
+  font-size: 22px;
+  color: #edf5e1;
+  font-family: "Squigles";
+  padding-left: 10px;
+}
+
+.InputLabel1 {
+  position: absolute;
+  top: 115px;
+  left: 210px;
+  font-size: 22px;
+  color: #edf5e1;
+  font-family: "Squigles";
+  cursor: text;
+}
+
+.InputLabel2 {
+  position: absolute;
+  top: 205px;
+  left: 210px;
+  font-size: 22px;
+  color: #edf5e1;
+  font-family: "Squigles";
+  cursor: text;
+}
+
+.InputField:hover {
+  border-color: #d3e7ff;
+}
+
+.InputField:focus {
+  outline: none;
+  border-color: #7db7ff;
+}
+
+.submitbutton {
+  height: 40px;
+  width: 100px;
+  border-color: #ffffff;
+  border-width: 6px;
+  border-radius: 40px;
+  background: none;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: "Squigles";
+  cursor: pointer;
+}
+
+.submitbutton:hover {
+  border-color: #d3e7ff;
+}
+.submitbutton:focus {
+  border-color: #7db7ff;
+}
